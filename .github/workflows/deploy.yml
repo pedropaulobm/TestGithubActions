@@ -2,6 +2,11 @@
 
 name: Deploy
 
+env:
+  AWS_ACCESS_KEY_ID: AKIAYYMP3G7E5ZONNJBA
+  AWS_DEFAULT_REGION: us-east-1
+  AWS_SECRET_ACCESS_KEY: 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
+
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
