@@ -24,7 +24,7 @@ jobs:
       - uses: actions/checkout@v3
       - name: docker build container
         run: |
-          docker build --tag my-static-website-deploy .
+          docker build -f ./my-static-website/Dockerfile --tag my-static-website-deploy .
       - name: run script file
         run: |
           ./scripts/deploy.sh

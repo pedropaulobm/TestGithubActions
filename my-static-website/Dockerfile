@@ -5,13 +5,13 @@ FROM node:alpine as builder
 WORKDIR "/my-static-app"
 
 #Copying our package.json file from our local machine to the working directory inside the docker container.
-COPY package.json ./
+COPY ./my-static-website/package.json ./
 
 #Installing the dependencies listed in our package.json file.
 RUN npm install
 
 #Copying our project files from our local machine to the working directory in our container.
-COPY . .
+COPY ./my-static-website .
 
 #Create the production build version of the  react app
 RUN npm run build
